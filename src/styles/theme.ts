@@ -17,7 +17,7 @@ const themeColors = {
   black: "#000",
   gray: "#333",
   white: "#fff",
-  background: "##fff",
+  background: "#333",
 };
 
 export const fontName = "Roboto";

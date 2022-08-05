@@ -13,13 +13,11 @@ export interface ICommitsPageProps {}
 
 const CommitsPage: React.FC<ICommitsPageProps> = (props) => {
   const params = useParams();
-  useEffect(() => {
-    console.log("####", params);
-  }, [params]);
+  useEffect(() => {}, [params]);
   const { data: commits, isFetching } = useFetch<Commits[]>(
     `repos/michaelcruz04/${params.reponame}/commits`
   );
-  console.log(`repos/michaelcruz04/${params.reponame}`);
+
   return (
     <ul>
       {isFetching && <p>Loading...</p>}
