@@ -12,10 +12,10 @@ function RepositoriesComponent() {
   );
   return (
     <ul>
-      {isFetching && <p>carregando...</p>}
+      {isFetching && <p>Loading...</p>}
       {repositories?.map((repo) => {
         return (
-          <Link to="Commits">
+          <Link to={`/commits/${repo.name}`}>
             <li key={repo.name}>
               <strong>{repo.name}</strong>
               <p>{repo.description}</p>
