@@ -9,6 +9,7 @@ const SiteRoutes: React.FC<IApplicationProps> = (props) => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/:user" element={<HomePage />} />
       <Route path="commits/:reponame" element={<CommitsPage />} />
     </Routes>
   );
