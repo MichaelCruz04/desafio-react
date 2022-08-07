@@ -2,28 +2,30 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const List = styled.li`
-  background: #2f3640;
-  border: 2px solid #2f3640;
-  border-radius: 3px;
+  background: #555;
+  border: 2px solid #333;
+  border-radius: 5px;
   color: #fdfdfd;
-  font-size: 1.2rem;
-  margin: 1rem;
-  padding: 1rem 1.5rem;
+  font-size: 30px;
+  width: 80%;
+  min-width: 440px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
+
 export const Title = styled.h1`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   color: #fdfdfd;
-  font-size: 25px;
+  font-size: 20px;
 `;
+
 export const CommitsLink = styled(Link)`
   color: white;
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  margin: 10px;
   &:hover,
   &:focus {
     color: blue;

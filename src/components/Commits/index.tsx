@@ -1,6 +1,13 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useEffect";
-import { CommitContainer, CommitH1 } from "./style";
+import {
+  BackLink,
+  CommitContainer,
+  CommitH1,
+  HeaderPage,
+  List,
+  UserName,
+} from "./style";
 import Commits from "./types";
 
 function CommitsUser() {
@@ -11,20 +18,20 @@ function CommitsUser() {
   );
 
   return (
-    <>
-      <Link to={`/${params.username}`}>Voltar</Link>
+    <CommitContainer>
+      <HeaderPage>Desafio React</HeaderPage>
+      <UserName>{`${params.username}`}</UserName>
       <CommitH1>Commits</CommitH1>
       <ul>
         {isFetching && <p>Loading...</p>}
         {commits?.slice(0, 10)?.map((commit) => {
           return (
-            <li key={commit.commit.message}>
-              <CommitContainer>{commit.commit.message}</CommitContainer>
-            </li>
+            <List key={commit.commit.message}>{commit.commit.message}</List>
           );
         })}
       </ul>
-    </>
+      <BackLink to={`/${params.username}`}>Voltar</BackLink>
+    </CommitContainer>
   );
 }
 

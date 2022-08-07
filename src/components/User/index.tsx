@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
-import { Button, Container, HeaderPage, Image, Input, UserName } from "./style";
+import {
+  Button,
+  Container,
+  Followers,
+  HeaderPage,
+  Image,
+  Input,
+  UserName,
+} from "./style";
 import MyUser from "./types";
 import RepositoriesList from "../RepositoryList";
 import { useParams } from "react-router-dom";
@@ -30,7 +38,7 @@ function User() {
         <>
           <UserName>{user?.name}</UserName>
           <Image src={user?.avatar_url} alt={user?.name} />
-          <p>seguidores {user?.followers}</p>
+          <Followers>seguidores {user?.followers}</Followers>
           <div>
             <Input
               placeholder="Buscar novo usuario"
