@@ -15,8 +15,8 @@ export const Title = styled.h1`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: blue;
-  font-size: larger;
+  color: #fdfdfd;
+  font-size: 25px;
 `;
 export const CommitsLink = styled(Link)`
   color: white;

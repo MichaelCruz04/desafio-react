@@ -18,7 +18,7 @@ export function useFetch<T = unknown>(url: string) {
       .finally(() => {
         setIsFetching(false);
       });
-  }, []);
+  }, [url]);
 
   return { data, isFetching, error };
 }

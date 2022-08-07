@@ -1,14 +1,13 @@
-import { Link, useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useEffect";
 import Repositories from "./types";
 import { CommitsLink, List, Title } from "./style";
 
-function RepositoriesList() {
-  const params = useParams();
-  const usr = params.user ? params.user : "michaelcruz04";
-  const userUrl = params.user
-    ? `users/${params.user}/repos`
-    : "users/michaelcruz04/repos";
+export interface IRepositoriesList {
+  user: string;
+}
+
+const RepositoriesList: React.FC<IRepositoriesList> = ({ user }) => {
+  const userUrl = `users/${user}/repos`;
   const { data: repositories, isFetching } = useFetch<Repositories[]>(userUrl);
 
   return (
@@ -18,16 +17,16 @@ function RepositoriesList() {
         {isFetching && <p>Loading...</p>}
         {repositories?.map((repo) => {
           return (
-            <CommitsLink to={`/commits/${usr}/${repo.name}`}>
-              <List key={repo.name}>
+            <List key={repo.id}>
+              <CommitsLink to={`/commits/${user}/${repo.name}`}>
                 <Title>{repo.name}</Title>
-              </List>
-            </CommitsLink>
+              </CommitsLink>
+            </List>
           );
         })}
       </ul>
     </>
   );
-}
+};
 
 export default RepositoriesList;

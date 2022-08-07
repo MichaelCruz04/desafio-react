@@ -1,12 +1,10 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useFetch } from "../../hooks/useEffect";
-import { Button } from "../User/style";
 import { CommitContainer, CommitH1 } from "./style";
 import Commits from "./types";
 
 function CommitsUser() {
   const params = useParams();
-  const navigate = useNavigate();
 
   const { data: commits, isFetching } = useFetch<Commits[]>(
     `repos/${params.username}/${params.reponame}/commits`
@@ -14,11 +12,11 @@ function CommitsUser() {
 
   return (
     <>
-      <Button onClick={() => navigate(-1)}>Voltar</Button>
+      <Link to={`/${params.username}`}>Voltar</Link>
       <CommitH1>Commits</CommitH1>
       <ul>
         {isFetching && <p>Loading...</p>}
-        {commits?.slice(0, 9)?.map((commit) => {
+        {commits?.slice(0, 10)?.map((commit) => {
           return (
             <li key={commit.commit.message}>
               <CommitContainer>{commit.commit.message}</CommitContainer>
