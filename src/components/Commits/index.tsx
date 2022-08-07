@@ -9,7 +9,7 @@ function CommitsUser() {
   const navigate = useNavigate();
 
   const { data: commits, isFetching } = useFetch<Commits[]>(
-    `repos/michaelcruz04/${params.reponame}/commits`
+    `repos/${params.username}/${params.reponame}/commits`
   );
 
   return (

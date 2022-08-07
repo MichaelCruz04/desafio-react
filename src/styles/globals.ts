@@ -1,7 +1,6 @@
 import { createGlobalStyle, css } from "styled-components";
 
 import { fontName } from "./theme";
-
 export default createGlobalStyle`
 ${({ theme }) => css`
   * {

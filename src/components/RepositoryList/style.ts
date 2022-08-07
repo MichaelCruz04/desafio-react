@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const List = styled.li`
-  background: #0099ff;
-  border: 2px solid #0099ff;
+  background: #2f3640;
+  border: 2px solid #2f3640;
   border-radius: 3px;
   color: #fdfdfd;
   font-size: 1.2rem;
@@ -16,4 +17,18 @@ export const Title = styled.h1`
   text-align: center;
   color: blue;
   font-size: larger;
+`;
+export const CommitsLink = styled(Link)`
+  color: white;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  margin: 10px;
+  &:hover,
+  &:focus {
+    color: blue;
+  }
+  &:active {
+    color: red;
+  }
 `;

@@ -1,10 +1,11 @@
 import { Link, useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useEffect";
 import Repositories from "./types";
-import { List, Title } from "./style";
+import { CommitsLink, List, Title } from "./style";
 
 function RepositoriesList() {
   const params = useParams();
+  const usr = params.user ? params.user : "michaelcruz04";
   const userUrl = params.user
     ? `users/${params.user}/repos`
     : "users/michaelcruz04/repos";
@@ -17,11 +18,11 @@ function RepositoriesList() {
         {isFetching && <p>Loading...</p>}
         {repositories?.map((repo) => {
           return (
-            <Link to={`/commits/${repo.name}`}>
+            <CommitsLink to={`/commits/${usr}/${repo.name}`}>
               <List key={repo.name}>
                 <Title>{repo.name}</Title>
               </List>
-            </Link>
+            </CommitsLink>
           );
         })}
       </ul>
