@@ -15,9 +15,10 @@ declare module "styled-components" {
 
 const themeColors = {
   black: "#000",
-  gray: "#333",
-  white: "#fff",
+  gray: "#2d3748",
+  white: "#ffffff",
   background: "#fff",
+  green: "#07d962",
 };
 
 export const fontName = "Roboto";

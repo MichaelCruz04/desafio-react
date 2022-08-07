@@ -19,7 +19,7 @@ const RepositoriesList: React.FC<IRepositoriesList> = ({ user }) => {
           return (
             <List key={repo.id}>
               <CommitsLink to={`/commits/${user}/${repo.name}`}>
-                <Title>{repo.name}</Title>
+                {repo.name}
               </CommitsLink>
             </List>
           );

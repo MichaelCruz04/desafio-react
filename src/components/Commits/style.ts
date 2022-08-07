@@ -10,7 +10,7 @@ export const CommitContainer = styled.div`
   min-width: 450px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #2d3748;
+  background-color: ${(props) => props.theme.colors.gray};
 `;
 
 export const CommitH1 = styled.h1`
@@ -21,7 +21,7 @@ export const CommitH1 = styled.h1`
 `;
 
 export const BackLink = styled(Link)`
-  background: #07d962;
+  background: ${(props) => props.theme.colors.green};
   border: 2px solid #2f3640;
   border-radius: 10px;
   color: #4a5568;
@@ -29,6 +29,7 @@ export const BackLink = styled(Link)`
   margin: 1rem;
   padding: 0rem 1.5rem;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export const HeaderPage = styled.h1`
@@ -41,19 +42,17 @@ export const UserName = styled.h2`
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 25px;
-  color: #07d962;
+  color: ${(props) => props.theme.colors.green};
 `;
 
 export const List = styled.li`
   background: #555;
   border: 2px solid #333;
   border-radius: 5px;
-  color: #fdfdfd;
-  font-size: 30px;
-  width: 80%;
-  min-width: 440px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  color: #ffffff;
+  font-size: 20px;
+  word-wrap: break-word;
+  padding: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
 `;
