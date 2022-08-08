@@ -30,6 +30,9 @@ export const BackLink = styled(Link)`
   padding: 0rem 1.5rem;
   text-decoration: none;
   cursor: pointer;
+  &:hover {
+    color: white;
+  }
 `;
 
 export const HeaderPage = styled.h1`

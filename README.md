@@ -1,6 +1,6 @@
  <h1>Desafio-React<h1/>
 
-> Status: Developing
+> Status: finished
 
 ### This project aims to show information of my user on github or any other user that I come looking for through a text field.
 

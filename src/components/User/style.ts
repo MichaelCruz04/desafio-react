@@ -9,6 +9,9 @@ export const Button = styled.button`
   margin: 1rem;
   padding: 0rem 1.5rem;
   cursor: pointer;
+  &:hover {
+    color: white;
+  }
 `;
 export const Image = styled.img`
   margin-top: 50px;
