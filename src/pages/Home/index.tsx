@@ -1,9 +1,8 @@
 import React from "react";
-import HomeCmt from "../../components/User";
+import User from "../../components/User";
 
-export interface IHomePageProps {}
-
-const HomePage: React.FC<IHomePageProps> = (props) => {
-  return <HomeCmt />;
+const Home: React.FC = () => {
+  return <User />;
 };
-export default HomePage;
+
+export default Home;

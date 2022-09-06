@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useFetch } from "../../hooks/useEffect";
+import { useFetch } from "../../hooks/useFetch";
 import {
   BackLink,
   CommitContainer,
@@ -10,10 +10,10 @@ import {
 } from "./style";
 import Commits from "./types";
 
-function CommitsUser() {
+const CommitsList: React.FC = () => {
   const params = useParams();
-
-  const { data: commits, isFetching } = useFetch<Commits[]>(
+  //poderia ter feito igual a pagina de repositories
+  const { data: commits, isFetching } = useFetch<Commits[]>( //essa funcao quando apagina carrega
     `repos/${params.username}/${params.reponame}/commits`
   );
 
@@ -22,6 +22,7 @@ function CommitsUser() {
       <HeaderPage>Desafio React</HeaderPage>
       <UserName>{`${params.username}`}</UserName>
       <CommitH1>Commits</CommitH1>
+      {/* limitar o numero de commites a ser mostrado com slice */}
       <ul>
         {isFetching && <p>Loading...</p>}
         {commits?.slice(0, 10)?.map((commit) => {
@@ -29,10 +30,11 @@ function CommitsUser() {
             <List key={commit.commit.message}>{commit.commit.message}</List>
           );
         })}
+        {/* modificar a forma de retorno p/pagina anterior, esta carregando o meu usurio novamente */}
       </ul>
       <BackLink to={`/${params.username}`}>Voltar</BackLink>
     </CommitContainer>
   );
-}
+};
 
-export default CommitsUser;
+export default CommitsList;

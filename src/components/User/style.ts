@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   background: ${(props) => props.theme.colors.green};
-  border: 2px solid #2f3640;
+  border: 2px solid ${(props) => props.theme.colors.gray333};
   border-radius: 10px;
-  color: #4a5568;
+  color: ${(props) => props.theme.colors.gray333};
   font-size: 1.2rem;
   margin: 1rem;
   padding: 0rem 1.5rem;
@@ -20,8 +20,8 @@ export const Image = styled.img`
   margin: auto;
 `;
 export const Input = styled.input`
-  background-color: #dcdde1;
-  border: 2px solid #2f3640;
+  background-color: ${(props) => props.theme.colors.grayLight};
+  border: 2px solid ${(props) => props.theme.colors.gray333};
   border-radius: 5px;
 `;
 
@@ -39,7 +39,7 @@ export const Container = styled.div`
 
 export const HeaderPage = styled.h1`
   margin-top: 10px;
-  color: #ffffff;
+  color: ${(props) => props.theme.colors.white};
   font-size: 50px;
 `;
 
@@ -51,7 +51,7 @@ export const UserName = styled.h2`
 `;
 
 export const Followers = styled.p`
-  color: #fdfdfd;
+  color: ${(props) => props.theme.colors.white};
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;

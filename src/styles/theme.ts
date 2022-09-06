@@ -15,7 +15,10 @@ declare module "styled-components" {
 
 const themeColors = {
   black: "#000",
+  gray555: "#555",
+  gray333: "#333",
   gray: "#2d3748",
+  grayLight: "#dcdde1",
   white: "#ffffff",
   background: "#fff",
   green: "#07d962",

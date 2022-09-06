@@ -1,10 +1,8 @@
 import React from "react";
-import CommitsUser from "../../components/Commits";
+import CommitsList from "../../components/CommitsList";
 
-export interface ICommitsPageProps {}
-
-const CommitsPage: React.FC<ICommitsPageProps> = (props) => {
-  return <CommitsUser />;
+const Commits: React.FC = () => {
+  return <CommitsList />;
 };
 
-export default CommitsPage;
+export default Commits;

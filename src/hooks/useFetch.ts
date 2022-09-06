@@ -5,7 +5,7 @@ export function useFetch<T = unknown>(url: string) {
   const [data, setData] = useState<T | null>(null);
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState<Error | null>(null);
-
+  // aqui estou importando minha api da pasta sercice
   useEffect(() => {
     api
       .get(url)
@@ -18,7 +18,7 @@ export function useFetch<T = unknown>(url: string) {
       .finally(() => {
         setIsFetching(false);
       });
-  }, [data]);
+  }, [url]);
 
   return { data, isFetching, error };
 }

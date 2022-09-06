@@ -1,4 +1,4 @@
- ![imagemReadme](https://user-images.githubusercontent.com/106933712/183315544-bddb6982-00fb-4026-946a-703d9c5ab3ba.PNG)
+![imagemReadme](https://user-images.githubusercontent.com/106933712/183315544-bddb6982-00fb-4026-946a-703d9c5ab3ba.PNG)
 
 > Status: finished
 
@@ -29,7 +29,7 @@
 ## How to run the application locally:
 
 1. Run yarn install
-2. Run yarn start
+2. Run yarn dev
 
 ## Access the published version at:
 
